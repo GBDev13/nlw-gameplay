@@ -1,7 +1,5 @@
 import React from 'react';
-import { RectButton , RectButtonProps } from 'react-native-gesture-handler';
-import { SvgProps } from 'react-native-svg';
-import { LinearGradient } from 'expo-linear-gradient';
+import { RectButtonProps } from 'react-native-gesture-handler';
 
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
@@ -9,7 +7,7 @@ import { View } from 'react-native';
 import { Text } from 'react-native';
 import { Avatar } from '../Avatar';
 
-type MemberProps = {
+export type MemberProps = {
   id: string;
   username: string;
   avatar_url: string;
@@ -22,7 +20,6 @@ type Props = RectButtonProps & {
 
 export function Member({ data }: Props) {
   const isOnline = data.status === 'online';
-
   const { on, primary } = theme.colors;
 
   return (
